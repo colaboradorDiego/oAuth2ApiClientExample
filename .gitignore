@@ -1,5 +1,9 @@
 # my excludes
 app.ini
+oAuthFlask/
+oAuthSimple/client-con request.py
+oAuthSimple/client-stomp Failed.py.001
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,28 +1,44 @@
 # oAuth2ApiClientExample
 A simple example OAuth 2.0 client written in Python for dummies
 
-
 # oAuth1 & oAuth2 Protocols
 OAuth 1.0/2.0 is the industry-standard protocols for authorization. OAuth 2.0 focuses on client developer simplicity.
-	https://oauth.net/2/
-OAuth for dummies
-	recomendamos la lectura de presentation/Oauth2.pdf
+	OAuth for dummies -> recomendamos la lectura de "presentation/Oauth2.pdf"
+	Call Your API Using Resource Owner Password Flow -> https://auth0.com/docs/flows/call-your-api-using-resource-owner-password-flow
+
+# Lecturas recomendadas
+	REST vs WebSocket for dummies -> https://www.itdo.com/blog/rest-vs-websocket-que-diferencia-hay/
+	REST vs WebSocket for sysAdmins -> https://www.baeldung.com/rest-vs-websockets
+	GET and POST requests using Python -> https://www.geeksforgeeks.org/get-post-requests-using-python/
+	STOMP - What is it? https://stomp.github.io/
+	STOMP - understtanding https://medium.com/@bilal.rifas/stomp-protocol-dc54813c3b95
+	STOMP - en video https://www.youtube.com/watch?v=zKkPrwpmesM
+	
+	
+	
+
 
 # Authlib for python
-
-OAuthLib is a framework which implements the logic of OAuth1 or OAuth2 without assuming a specific HTTP request object or web framework. Use it to graft OAuth client support onto your favorite HTTP library
+OAuthLib is a framework which implements OAuth1 & OAuth2 without assuming a specific HTTP request object or web framework.
 	https://pypi.org/project/oauthlib/
 	doc's https://oauthlib.readthedocs.io/en/latest/index.html
-	doc's https://oauthlib.readthedocs.io/en/latest/oauth2/clients/client.html
-	
-
 
 # requests-oauthlib for python
-If you are using the requests HTTP library you may be interested in using requests-oauthlib which provides an OAuth 2 Client. 
+Requests-OAuthlib uses Requests and OAuthlib libraries to provide an easy Python interface for building OAuth1 and OAuth2 clients.
+	https://pypi.org/project/requests-oauthlib/
 	doc's https://requests-oauthlib.readthedocs.io/en/latest/index.html
 	
-	https://github.com/requests/requests-oauthlib
-	https://pypi.org/project/requests-oauthlib/
+# stomp.py
+“stomp.py” is a Python client library for accessing messaging servers (such as ActiveMQ, Artemis or RabbitMQ) using the STOMP protocol
+	https://pypi.org/project/stomp.py/
+	http://jasonrbriggs.github.io/stomp.py/index.html
+	
+	https://github.com/search?q=stomp+client
+	cliente ejemplo -> https://github.com/sithu/stomp-client/tree/master/python/stomppy
+	cliente mas profesional -> https://github.com/openraildata/stomp-client-python
+	
+
+	
 
 
 ## 1. Resultados de la siguiente busqueda en github: "oauth client example"
@@ -62,19 +78,7 @@ Flask
 *****
 Es un micro framework para programar aplicaciones web en pyhon. Es del lado servidor que corre, mas que nada preciso:
 	"pyhon rest client"
-	
-	
-	
 
-
-
-
-Requests for python
-*******************
-Requests is a simple, yet elegant HTTP library.
-	https://pypi.org/project/requests/
-	
-	
 	
 rauth
 *****
