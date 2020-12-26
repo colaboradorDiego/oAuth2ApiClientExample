@@ -2,41 +2,42 @@
 A simple example OAuth 2.0 client written in Python for dummies
 
 # oAuth1 & oAuth2 Protocols
-OAuth 1.0/2.0 is the industry-standard protocols for authorization. OAuth 2.0 focuses on client developer simplicity.
+OAuth 1.0/2.0 is the industry-standard protocol for authorization. OAuth 2.0 focuses on client developer simplicity.
 	OAuth for dummies -> recomendamos la lectura de "presentation/Oauth2.pdf"
-	Call Your API Using Resource Owner Password Flow -> https://auth0.com/docs/flows/call-your-api-using-resource-owner-password-flow
+	
 
 # Lecturas recomendadas
-	REST vs WebSocket for dummies -> https://www.itdo.com/blog/rest-vs-websocket-que-diferencia-hay/
+	1. REST vs WebSocket for dummies -> https://www.itdo.com/blog/rest-vs-websocket-que-diferencia-hay/
+	2. GET and POST requests using Python -> https://www.geeksforgeeks.org/get-post-requests-using-python/
+	3. STOMP - en video https://www.youtube.com/watch?v=zKkPrwpmesM
+	
+	Podemos complementar las lecturas anteriores con estas:
 	REST vs WebSocket for sysAdmins -> https://www.baeldung.com/rest-vs-websockets
-	GET and POST requests using Python -> https://www.geeksforgeeks.org/get-post-requests-using-python/
-	STOMP - What is it? https://stomp.github.io/
-	STOMP - understtanding https://medium.com/@bilal.rifas/stomp-protocol-dc54813c3b95
-	STOMP - en video https://www.youtube.com/watch?v=zKkPrwpmesM
 	
 	
-	
-
-
 # Authlib for python
 OAuthLib is a framework which implements OAuth1 & OAuth2 without assuming a specific HTTP request object or web framework.
-	https://pypi.org/project/oauthlib/
+	procject -> https://pypi.org/project/oauthlib/
+	Resource Owner Password Flow -> https://auth0.com/docs/flows/call-your-api-using-resource-owner-password-flow
 	doc's https://oauthlib.readthedocs.io/en/latest/index.html
 
 # requests-oauthlib for python
 Requests-OAuthlib uses Requests and OAuthlib libraries to provide an easy Python interface for building OAuth1 and OAuth2 clients.
-	https://pypi.org/project/requests-oauthlib/
+	project -> https://pypi.org/project/requests-oauthlib/
 	doc's https://requests-oauthlib.readthedocs.io/en/latest/index.html
 	
 # stomp.py
 “stomp.py” is a Python client library for accessing messaging servers (such as ActiveMQ, Artemis or RabbitMQ) using the STOMP protocol
-	https://pypi.org/project/stomp.py/
-	http://jasonrbriggs.github.io/stomp.py/index.html
+	project -> https://pypi.org/project/stomp.py/
+	docs -> http://jasonrbriggs.github.io/stomp.py/index.html
 	
 	https://github.com/search?q=stomp+client
 	cliente ejemplo -> https://github.com/sithu/stomp-client/tree/master/python/stomppy
 	cliente mas profesional -> https://github.com/openraildata/stomp-client-python
 	
+	Entendiendo un poco mas de STOMP
+	STOMP What is it? -> https://stomp.github.io/
+	STOMP for sysAdmins -> https://medium.com/@bilal.rifas/stomp-protocol-dc54813c3b95
 
 	
 
