@@ -9,7 +9,6 @@ OAuth 1.0/2.0 is the industry-standard protocol for authorization. OAuth 2.0 foc
 # Lecturas recomendadas
 	1. REST vs WebSocket for dummies -> https://www.itdo.com/blog/rest-vs-websocket-que-diferencia-hay/
 	2. GET and POST requests using Python -> https://www.geeksforgeeks.org/get-post-requests-using-python/
-	3. STOMP - en video https://www.youtube.com/watch?v=zKkPrwpmesM
 	
 	Podemos complementar las lecturas anteriores con estas:
 	REST vs WebSocket for sysAdmins -> https://www.baeldung.com/rest-vs-websockets
@@ -29,21 +28,6 @@ Requests-OAuthlib uses Requests and OAuthlib libraries to provide an easy Python
 	project -> https://pypi.org/project/requests-oauthlib/
 	doc's https://requests-oauthlib.readthedocs.io/en/latest/index.html
 	
-# stomp.py
-“stomp.py” is a Python client library for accessing messaging servers (such as ActiveMQ, Artemis or RabbitMQ) using the STOMP protocol
-	project -> https://pypi.org/project/stomp.py/
-	docs -> http://jasonrbriggs.github.io/stomp.py/index.html
-	
-	https://github.com/search?q=stomp+client
-	cliente ejemplo -> https://github.com/sithu/stomp-client/tree/master/python/stomppy
-	cliente mas profesional -> https://github.com/openraildata/stomp-client-python
-	
-	Entendiendo un poco mas de STOMP
-	STOMP What is it? -> https://stomp.github.io/
-	STOMP for sysAdmins -> https://medium.com/@bilal.rifas/stomp-protocol-dc54813c3b95
-
-	
-
 
 ## 1. Resultados de la siguiente busqueda en github: "oauth client example"
 
@@ -78,6 +62,14 @@ https://github.com/vastevenson/vs-youtube-auth-example
 
 ## 2. Tools, libs & frameworks
 
+Fiddler
+*******
+https://www.telerik.com/fiddler/usecases/https-traffic-recording
+
+WireShark
+**********
+https://wiki.wireshark.org/CaptureFilters
+
 Flask
 *****
 Es un micro framework para programar aplicaciones web en pyhon. Es del lado servidor que corre, mas que nada preciso:
@@ -91,4 +83,12 @@ A simple Python OAuth 1.0/a, OAuth 2.0, and Ofly consumer library built on
 top of Requests.	
 > Project: https://pypi.org/project/rauth/
 > Docs: https://rauth.readthedocs.io/en/latest/
+
+
+# HTTP METHODS
+CONNECT -> https://developer.mozilla.org/es/docs/Web/HTTP/Methods/CONNECT
+
+
+# Network Capture Tools for API Developers
+Introduccion -> https://developers.google.com/gdata/articles/wireshark
 

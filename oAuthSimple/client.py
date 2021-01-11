@@ -13,6 +13,15 @@ from utiles.utiles import *
 import stomp
 
 
+from websocket._exceptions import WebSocketAddressException
+from websocket._exceptions import WebSocketBadStatusException
+from websocket import create_connection
+
+import websocket
+
+
+
+
 # from API requiremetns we must set:
 #  grant_type    = password
 #  ssl           = false
@@ -50,17 +59,88 @@ def connect(connDATA):
         return False
 
     except (requests.exceptions.ConnectionError) as e:
-        print('HEY PUTO ConnectionError')
+        print('HEY PUTO requests.exceptions.ConnectionError')
         return False
 
     except (requests.exceptions.RequestException) as e:
-        print('HEY PUTO RequestException')
+        print('HEY PUTO requests.exceptions.RequestException')
+        print('Cuando el server estaba apgado entro por aca')
         return False
 
-# Listeners are simply a subclass which implements the methods in the ConnectionListener class
-class MyListener():
+# Stomp Listeners are simply a subclass which implements the methods in the ConnectionListener class
+class MyStompListener():
     # TODO create de listener
     a = 'a'
+
+
+class MySocketClient:
+    def __init__(self, connDATA, myToken):
+        websocket.enableTrace(True)
+        self.connDATA = connDATA
+        self.myToken = myToken
+
+        wssUrl = connDATA['stomp']['host'] + connDATA['stomp']['service']
+        wssHeader = {
+            'Authorization': 'Bearer ' + myToken['access_token']
+        }
+
+        # https://stackoverflow.com/questions/26980966/using-a-websocket-client-as-a-class-in-python
+        self.ws = websocket.WebSocketApp(wssUrl,
+                                         on_message = lambda ws, msg: self.on_message(ws, msg),
+                                         on_error = lambda ws, msg: self.on_error(ws, msg),
+                                         on_close = lambda ws: self.on_close(ws),
+                                         on_open = lambda ws: self.on_open(ws)
+        )
+
+    def on_message(self, ws, msg):
+        print('on_message')
+        print(msg)
+
+    def on_error(self, ws, msg):
+        print('on_error')
+        print(msg)
+
+    def on_close(self, ws):
+        print('on_close')
+
+    def on_open(self, ws):
+        print('on_open')
+
+
+def startWSockectClient1(connDATA, myToken):
+    myClient = MySocketClient(connDATA, myToken)
+
+
+def startWSockectClient(connDATA, myToken):
+    wssUrl = connDATA['stomp']['host'] + connDATA['stomp']['service']
+    wssHeader = {
+        'Authorization': 'Bearer ' + myToken['access_token']
+    }
+
+    try:
+        ws = create_connection(wssUrl, header=wssHeader)
+
+        print("Sending 'Hello, World'...")
+        ws.send("Hello, World")
+        print("Sent")
+        print("Receiving...")
+        result = ws.recv()
+        print("Received '%s'" % result)
+        ws.close()
+
+
+    except (WebSocketAddressException) as e:
+        print('HEY PUTO websocket._exceptions.WebSocketAddressException')
+        print('Cuando el server estaba apgado entro por aca')
+        return False
+
+    except (WebSocketBadStatusException) as e:
+        print('HEY PUTO websocket._exceptions.WebSocketBadStatusException')
+        print('Cuando el token no esta')
+        return False
+
+
+
 
 # Establishing a connection http://jasonrbriggs.github.io/stomp.py/api.html#establishing-a-connection
 # To receive messages you need to setup a listener on your connection http://jasonrbriggs.github.io/stomp.py/api.html#sending-and-receiving-messages
@@ -78,10 +158,21 @@ def startStompClient(connDATA, myToken):
     myHeader = {
         'Authorization': 'Bearer ' + myToken['access_token']
     }
-    conn.connect(
-        wait=True,
-        headers=myHeader
-    )
+
+    try:
+        conn.connect(
+            username='None',
+            passcode='None',
+            wait=True,
+            headers=myHeader
+        )
+
+    except (stomp.exception.ConnectFailedException) as e:
+        print('HEY PUTO stomp.exception.ConnectFailedException')
+        print('')
+        return False
+
+
 
 # main proccess
 def startApp(connDATA):
@@ -97,7 +188,9 @@ def startApp(connDATA):
     }
 
 
-    startStompClient(connDATA, myToken)
+    #startStompClient(connDATA, myToken)
+    #startWSockectClient(connDATA, myToken)
+    startWSockectClient1(connDATA, myToken)
 
     # 13.2.
     # preciosIndices(connDATA, myClient, myHeader)
