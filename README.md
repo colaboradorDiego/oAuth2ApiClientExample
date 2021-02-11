@@ -17,7 +17,16 @@ Requests-OAuthlib uses Requests and OAuthlib libraries to provide an easy Python
 	project -> https://pypi.org/project/requests-oauthlib/
 	doc's https://requests-oauthlib.readthedocs.io/en/latest/index.html
 	
-
+# ejercicios luego de las lecturas
+	oAuthSimple -> Cliente oAuth2 bien basico y por consola
+				-> Progamado teniendo en cuanta autenticar contra OMS BYMA
+				-> parametros = jsonSample.ini (parametros tiene que tener esta estructura jSon)
+				-> jsonSample tiene que tener usuarios y claves correctas.
+	
+	OAuthFlask -> El mismo cliente anterior pero se metio el flask en el medio.
+			   -> Aun no se bien como llegue aca pero vamos a tratar que funcione
+			   -> Aun no funciona
+			   
 ## 1. Resultados de la siguiente busqueda en github: "oauth client example"
 
 https://github.com/Signafire/oauth-client-example-python/blob/master/requirements.txt

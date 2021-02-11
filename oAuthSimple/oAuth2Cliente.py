@@ -47,9 +47,10 @@ def startApp(conArgs):
 
 
 def main(argv):
-    # loads JSON from a file.
 
-    with open(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'appOmsApi.ini')), 'r') as f:
+    # loads JSON from a file.
+    parametros = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'appOmsApi.ini'))
+    with open(parametros, 'r') as f:
         conArgs = json.load(f)
     startApp(conArgs)
 
